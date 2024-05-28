@@ -1,0 +1,104 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f4f4f4;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #f4f4f4;
+}
+
+.branding {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar__ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav__link--active,
+.nav__link:hover,
+.nav__link:focus {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.layout--flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.content--sidebar {
+  width: 70%;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: #333;
+  color: #f4f4f4;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 321px) {
+  .hero__title {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .hero,
+  .layout--flex {
+    flex-direction: row;
+  }
+  .sidebar {
+    width: 30%;
+  }
+}
